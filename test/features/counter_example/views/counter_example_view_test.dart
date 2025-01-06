@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_getx/features/counter_example/controllers/counter_example_controller.dart';
+import 'package:flutter_getx/features/counter_example/views/counter_example_view.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:get/get.dart';
-import 'package:flutter_getx/controllers.dart';
-import 'package:flutter_getx/main.dart';
 
 void main() {
   tearDown(() {
-    Get.delete<Controller>(force: true);
+    Get.delete<CounterExampleController>(force: true);
   });
 
-  testWidgets('Home widget tiene botones de incremento, decremento y muestra el contador',
+  testWidgets(
+      'CounterExampleView widget tiene botones de incremento, decremento y muestra el contador',
       (WidgetTester tester) async {
-    await tester.pumpWidget(const GetMaterialApp(home: Home()));
+    await tester.pumpWidget(const GetMaterialApp(home: CounterExampleView()));
 
     expect(find.byIcon(Icons.add), findsOneWidget);
     expect(find.byIcon(Icons.remove), findsOneWidget);
@@ -21,7 +22,7 @@ void main() {
 
   testWidgets('Al presionar el botón de incremento, el contador aumenta',
       (WidgetTester tester) async {
-    await tester.pumpWidget(const GetMaterialApp(home: Home()));
+    await tester.pumpWidget(const GetMaterialApp(home: CounterExampleView()));
 
     expect(find.text('0'), findsOneWidget);
 
@@ -34,7 +35,7 @@ void main() {
 
   testWidgets('Al presionar el botón de decremento, el contador disminuye',
       (WidgetTester tester) async {
-    await tester.pumpWidget(const GetMaterialApp(home: Home()));
+    await tester.pumpWidget(const GetMaterialApp(home: CounterExampleView()));
 
     final Finder incrementButton = find.byIcon(Icons.add);
     await tester.tap(incrementButton);
