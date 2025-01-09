@@ -4,14 +4,15 @@ import 'package:flutter_getx/features/home/views/home_view.dart';
 
 class AppRoutes {
   static const initial = '/home';
+  static const counterExample = '/counter-example';
 
   static final routes = [
     GetPage(
-      name: '/home',
+      name: initial,
       page: () => const HomeView(),
     ),
     GetPage(
-      name: '/counter-example',
+      name: counterExample,
       page: () => const CounterExampleView(),
     ),
   ];

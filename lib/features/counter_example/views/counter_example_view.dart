@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_getx/features/home/views/home_view.dart';
 import 'package:get/get.dart';
 import 'package:flutter_getx/features/counter_example/controllers/counter_example_controller.dart';
 
@@ -12,7 +11,7 @@ class CounterExampleView extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Home'),
+        title: const Text('Flutter GetX Test - Counter Example'),
       ),
       body: Center(
         child: Column(
@@ -107,8 +106,9 @@ class CounterExampleView extends StatelessWidget {
             ),
             const SizedBox(height: 24),
             ElevatedButton(
+              key: const Key('goToHomeButton'),
               onPressed: () {
-                Get.to(const HomeView());
+                Get.offAllNamed('/home');
               },
               child: const Text('Go to Home'),
             ),

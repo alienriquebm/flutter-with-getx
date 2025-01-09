@@ -16,6 +16,7 @@ class GetxAppTest extends StatelessWidget {
       initialRoute: AppRoutes.initial,
       getPages: AppRoutes.routes,
       theme: ThemeData.light(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
