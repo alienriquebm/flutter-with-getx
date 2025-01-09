@@ -8,7 +8,7 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     List<Map<String, dynamic>> pages = [
       {'title': 'Counter example', 'route': '/counter-example'},
-      {'title': 'Layout 1 example', 'route': '/layout-1-example'},
+      {'title': 'Layout example', 'route': '/layout-example'},
     ];
     return Scaffold(
       appBar: AppBar(

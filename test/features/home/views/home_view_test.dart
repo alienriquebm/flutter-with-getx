@@ -15,7 +15,7 @@ void main() {
       (WidgetTester tester) async {
     await tester.pumpWidget(createTestableApp());
     expect(find.text('Counter example'), findsOneWidget);
-    expect(find.text('Layout 1 example'), findsOneWidget);
+    expect(find.text('Layout example'), findsOneWidget);
   });
 
   testWidgets('Al hacer tap en un item de la lista, se navega a la página correspondiente',
