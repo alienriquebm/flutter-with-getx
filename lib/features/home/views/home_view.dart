@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_getx/core/routes/app_routes.dart';
 import 'package:get/get.dart';
 
 class HomeView extends StatelessWidget {
@@ -7,8 +8,8 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<Map<String, dynamic>> pages = [
-      {'title': 'Counter example', 'route': '/counter-example'},
-      {'title': 'Layout example', 'route': '/layout-example'},
+      {'title': 'Counter example', 'route': AppRoutes.counterExample},
+      {'title': 'Layout example', 'route': AppRoutes.layoutExample},
     ];
     return Scaffold(
       appBar: AppBar(
